@@ -201,16 +201,16 @@ const inputActual = [
   139,
 ];
 
-const sumToTarget = (arr, target) => {
+const multiplyNumbersSumTo2020 = (numbers) => {
   let result = [];
-  for (i = 0; i < arr.length; i++) {
-    for (j = i + 1; j < arr.length; j++) {
-      if (arr[i] + arr[j] === target) {
-        result.push(arr[i], arr[j]);
-        return result;
+  for (i = 0; i < numbers.length; i++) {
+    for (j = i + 1; j < numbers.length; j++) {
+      if (numbers[i] + numbers[j] === 2020) {
+        result.push(numbers[i], numbers[j]);
+        return result[0] * result[1];
       }
     }
   }
 };
 
-console.log(sumToTarget(inputActual, 2020));
+console.log(multiplyNumbersSumTo2020(inputActual));
